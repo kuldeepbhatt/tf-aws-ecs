@@ -1,0 +1,29 @@
+[{
+    "name": "${container_name}",
+    "image": "${image}",
+    "portMappings": [{
+        "containerPort": 4200,
+        "hostPort": 4200
+    }],
+    "cpu": 256,
+    "memory": 512,
+    "networkMode": "${networkMode}",
+    "essential": true,
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "${log_group}",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "${container_name}"
+        }
+    },
+    "environment": [{
+            "name": "FOO",
+            "value": "BAR"
+        },
+        {
+            "name": "PORT",
+            "value":"4200"
+        }
+    ]
+}]
