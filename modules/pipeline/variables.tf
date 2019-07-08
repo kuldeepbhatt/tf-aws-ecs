@@ -40,7 +40,7 @@ variable "container_name" {
 
 variable "git_OAuthToken" {
   description = "Access Token to access github source from AWS"
-  default = "32e144dfbe41115a6567f2446bc10ebbb1181269"
+  default = ""
 }
 
 
